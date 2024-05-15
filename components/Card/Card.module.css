@@ -1,0 +1,46 @@
+.wrapper {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  
+  cursor: pointer;
+  position: relative;
+  
+}
+.wrapper a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+
+.wrapper:hover {
+  transform: translateY(-3px);
+  transition: 0.3s ease-in;
+}
+
+.locationPhoto {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.infoWrapper {
+  padding: 20px;
+  position:  relative;
+}
+.wrapper button {
+  all: unset;
+}
+
+.favoritesBtn {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.favoritesBtn:hover {
+  transform: scale(1.1);
+}

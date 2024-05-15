@@ -1,0 +1,40 @@
+.wrapper {
+  background-color: var(--primary-color);
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.logo a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.links a:last-child {
+  border: 1px solid rgb(95, 92, 92);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.links a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+@media only screen and (max-width: 640px) {
+  .links {
+    display: none;
+  }
+}

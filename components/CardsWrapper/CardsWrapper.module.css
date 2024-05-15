@@ -1,0 +1,23 @@
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  margin-top: 30px;
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 1300px) {
+  .cardsWrapper {
+  grid-template-columns: 1fr 1fr 1fr
+  }
+}
+@media only screen and (max-width: 970px) {
+  .cardsWrapper {
+  grid-template-columns: 1fr 1fr 
+  }
+}
+@media only screen and (max-width: 640px) {
+  .cardsWrapper {
+  grid-template-columns: 1fr ;
+  }
+}

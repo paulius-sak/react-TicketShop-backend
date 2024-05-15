@@ -1,0 +1,61 @@
+.wrapper {
+  width: 50%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  color: var(--primary-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+
+
+.locationPhoto {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.infoWrapper {
+  padding: 20px;
+}
+
+.favoritesBtn {
+  all: unset;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.favoritesBtn:hover {
+  transform: scale(1.1);
+}
+.deleteBtn {
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgb(49, 72, 95) 0px 7px 8px -4px;
+  margin-top: 1rem;
+}
+.deleteBtn:hover {
+  background-color: rgb(218, 213, 213);
+}
+
+@media only screen and (max-width: 1300px) {
+}
+@media only screen and (max-width: 970px) {
+}
+@media only screen and (max-width: 640px) {
+  .wrapper {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+}
