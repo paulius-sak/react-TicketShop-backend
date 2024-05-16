@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header/Header";
 import { links, logo } from "../../constans/links";
-import styles from "../../styles/Home.module.css";
+import styles from "./ticket.module.css";
 import cookies from "js-cookie";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -41,8 +41,8 @@ const Ticket = () => {
   };
 
   useEffect(() => {
-    fetchTicket();
-  }, []);
+    router.query && fetchTicket();
+  }, [router]);
 
   const [isFavorite, setFavorite] = useState(false);
 

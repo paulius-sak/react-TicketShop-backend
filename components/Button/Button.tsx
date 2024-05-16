@@ -3,14 +3,15 @@ import styles from "./Button.module.css";
 import Spinner from "../Spinner/Spinner";
 
 type ButtonProps = {
-    onLogin: () => void;
+    onClick: () => void;
     isLoading: boolean;
     title: string;
+    className?: string;
 }
 
-const Button = ({onLogin, isLoading, title}: ButtonProps) => {
+const Button = ({onClick, isLoading, title, className}: ButtonProps) => {
   return (
-    <button onClick={onLogin}>{isLoading ? <Spinner /> : <>{title}</>}</button>
+    <button className={`${styles.button} ${className}`} onClick={onClick}>{isLoading ? <Spinner /> : <>{title}</>}</button>
   );
 };
 
