@@ -6,6 +6,7 @@ import { TicketType } from "../types/ticket";
 import cookies from "js-cookie";
 import axios, { AxiosError } from "axios";
 import { useRouter } from "next/router";
+import PageTemplate from "@/components/PageTemplate/PageTemplate";
 
 const Index = () => {
   const [tickets, setTickets] = useState<TicketType[] | null>(null);
@@ -36,10 +37,9 @@ const Index = () => {
   }, []);
 
   return (
-    <div>
-      <Header logo={logo} links={links} />
+    <PageTemplate>
       {tickets && <CardsWrapper tickets={tickets} />}
-    </div>
+    </PageTemplate>
   );
 };
 

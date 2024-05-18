@@ -1,14 +1,13 @@
 import React from 'react'
-import Header from '../../components/Header/Header'
 import LoginForm from '../../components/LogInForm/LoginForm'
-import {links, logo} from "../../constans/links"
+import PageTemplate from '@/components/PageTemplate/PageTemplate'
 
 const index = () => {
   return (
-    <div>
-      <Header logo={logo} links={links}/>
+    <PageTemplate>
+      
       <LoginForm/>
-    </div>
+    </PageTemplate>
   )
 }
 

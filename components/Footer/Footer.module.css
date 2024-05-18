@@ -1,0 +1,14 @@
+.wrapper {
+  background-color: var(--primary-color);
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin-top: 5rem;
+}
+
+.logo a {
+  color: var(--text-color);
+  text-decoration: none;
+}

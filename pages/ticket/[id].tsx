@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Header from "../../components/Header/Header";
-import { links, logo } from "../../constans/links";
 import styles from "./ticket.module.css";
 import cookies from "js-cookie";
 import axios from "axios";
@@ -10,9 +8,14 @@ import { TicketType } from "../../types/ticket";
 import Image from "next/image";
 import heart from "../../assets/heart.svg";
 import heartRed from "../../assets/heartRed.svg";
+import Modal from "@/components/Modal/Modal";
+import PageTemplate from "@/components/PageTemplate/PageTemplate";
+
+
 
 const Ticket = () => {
   const [ticket, setTicket] = useState<TicketType | null>(null);
+  const [isShowWarning, setShowWarning] = useState(false);
 
   const router = useRouter();
   const { id } = router.query;
@@ -62,7 +65,7 @@ const Ticket = () => {
           headers,
         }
       );
-      router.push("/")
+      router.push("/");
     } catch (err) {
       const axiosError = err as AxiosError;
       if (axiosError.response?.status === 401) {
@@ -75,8 +78,8 @@ const Ticket = () => {
   };
 
   return (
-    <div >
-      <Header logo={logo} links={links} />
+    <PageTemplate>
+    <main>
       <div className={styles.wrapper}>
         <img
           className={styles.locationPhoto}
@@ -95,10 +98,21 @@ const Ticket = () => {
               alt="favorites"
             />
           </button>
-          <button onClick={deleteFetchTicket} className={styles.deleteBtn}>Delete</button>
+          <button onClick={() => setShowWarning(true)} className={styles.deleteBtn}>
+            Delete
+          </button>
         </div>
       </div>
-    </div>
+
+      {isShowWarning && (
+        <Modal
+          message="Do you really want to delete this ticket?"
+          onConfirm={deleteFetchTicket}
+          onCancel={() => setShowWarning(false)}
+        />
+      )}
+    </main>
+    </PageTemplate>
   );
 };
 

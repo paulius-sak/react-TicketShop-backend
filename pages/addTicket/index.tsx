@@ -6,6 +6,7 @@ import styles from "./addTicket.module.css";
 import axios from "axios";
 import cookies from "js-cookie";
 import Button from "../../components/Button/Button";
+import PageTemplate from "@/components/PageTemplate/PageTemplate";
 
 const AddTicket = () => {
   const router = useRouter();
@@ -53,8 +54,8 @@ const AddTicket = () => {
     title && price && fromLocation && toLocation && toLocationPhotoUrl;
 
   return (
-    <div>
-      <Header logo={logo} links={links} />
+    <PageTemplate>
+      
       <div className={styles.formWrapper}>
         <h1>Add Ticket</h1>
         <div className={styles.form}>
@@ -97,7 +98,7 @@ const AddTicket = () => {
           />
         </div>
       </div>
-    </div>
+    </PageTemplate>
   );
 };
 
