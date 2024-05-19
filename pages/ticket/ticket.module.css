@@ -21,6 +21,10 @@
   padding: 20px;
 }
 
+.infoWrapper p {
+  padding-top: 20px;
+}
+
 .favoritesBtn {
   all: unset;
   width: 32px;

@@ -91,6 +91,7 @@ const Ticket = () => {
           <h3>{ticket?.price}$</h3>
           <h4>From: {ticket?.fromLocation}</h4>
           <h4>To: {ticket?.toLocation}</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus praesentium magni dolorem repellat mollitia ut voluptatem accusamus ab nam a. Nemo sed id eius repellat reprehenderit, accusamus quidem non illo.</p>
           <button onClick={favorite}>
             <Image
               className={styles.favoritesBtn}

@@ -28,13 +28,56 @@
   color: var(--text-color);
   text-decoration: none;
 }
-.links a:hover {
+.links a:hover,
+.linksMobile a:hover {
   text-decoration: underline;
   text-underline-offset: 5px;
+}
+
+.burgerMenu {
+  all: unset;
+  display: none;
+}
+.linksMobileWrapper {
+  display: none;
 }
 
 @media only screen and (max-width: 640px) {
   .links {
     display: none;
+  }
+  .burgerMenu {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .linksMobileWrapper {
+    display: flex;
+    position: absolute;
+    top: 6rem;
+    height: 100vh;
+    background: var(--primary-color);
+    width: 100%;
+    z-index: 2;
+    border-top: 2px solid rgb(240, 240, 240);
+    left: -1000px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .linksMobileWrapperOpen {
+    left: 0;
+  }
+
+  .linksMobile {
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+  .linksMobile a {
+    color: var(--text-color);
+    cursor: pointer;
+    text-decoration: none;
   }
 }
